@@ -1,0 +1,230 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Logo Image */
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Orange Button */
+.apply-button {
+  background-color: white;
+  color: #ff5c02;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.apply-button:hover {
+  background-color: #ffe8db;
+}
+
+/* Navbar - Full Orange with White Text */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff5c02;
+  color: white;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-links li:hover {
+  color: #ffe8db;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f3f4f6;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #ff5c02;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.stat {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 160px;
+}
+
+.stat-number {
+  color: #ff5c02;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Companies Section */
+.top-companies {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.top-companies h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #ff5c02;
+}
+
+.company-logos {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.company-logos img {
+  flex: 0 0 auto;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  scroll-snap-align: center;
+  transition: transform 0.3s;
+}
+
+.company-logos img:hover {
+  transform: scale(1.05);
+}
+
+/* Resources Section */
+.resources {
+  background-color: #f3f4f6;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.resources h2 {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.25rem;
+  color: #ff5c02;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.resources li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Footer */
+footer {
+  background: #ff5c02;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffe8db;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-logos {
+    gap: 1rem;
+  }
+
+  .company-logos img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .logo-img {
+    height: 30px;
+  }
+}
